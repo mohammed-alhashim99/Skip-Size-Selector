@@ -80,7 +80,7 @@ This project is a redesigned version of the "Skip Size Selector" page for WeWant
 ## 🧪 Local Setup Instructions
 
 ```bash
-git clone https://github.com/your-username/skip-selector-redesign.git
+git clone https://github.com/mohammed-alhashim99/Skip-Size-Selector.git
 cd skip-selector-redesign
 npm install
 npm install lucide-react
