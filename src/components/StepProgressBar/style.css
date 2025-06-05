@@ -1,0 +1,124 @@
+/* Layout Container */
+.page-layout {
+  display: flex;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  background-color: #33363c;
+}
+
+/* Left Vertical Step Bar */
+.vertical-step-bar {
+  padding: 2rem 1rem 1rem;
+  width: 100%;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.receipt-wrapper {
+  position: sticky;
+  top: 400px; /* adjust as needed */
+}
+/* Steps List */
+.vertical-step-list {
+  position: relative;
+  padding-left: 2.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Each Step */
+.step-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+
+}
+
+
+
+/* Step Circle + Icon + Number */
+.step-circle {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 50%;
+  background-color: #e5e7eb;
+  color: #374151;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* Completed & Active Colors */
+.step-item.completed .step-circle {
+  background-color: #10b981;
+  color: white;
+}
+
+.step-item.active .step-circle {
+  background-color: #3b82f6;
+  color: white;
+}
+
+
+/* Step Label Text */
+.step-text {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.step-label {
+  font-size: 0.95rem;
+  /* color: #4b5563; */
+  color: white;
+}
+
+.step-item.completed .step-label {
+  color: #10b981;
+}
+
+.step-item.active .step-label {
+  color: #3b82f6;
+  font-weight: 900;
+}
+
+.step-label {
+  /* color: #111827; */
+  color: gray;
+}
+
+/* Main Content Area */
+.content-area {
+  flex: 1;
+  /* background-color: #ffffff; */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Heading + Description */
+.content-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.content-description {
+  color: #475569;
+}
+

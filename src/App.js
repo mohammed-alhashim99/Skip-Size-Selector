@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import StepProgressBar from './components/StepProgressBar/StepProgressBar';
 
-function App() {
+export default function App() {
+  const [selectedSkip, setSelectedSkip] = useState(null);
+  const [currentStep, setCurrentStep] = useState(2); // مثال: حاليًا في "Select Skip"
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StepProgressBar
+      selectedSkip={selectedSkip}
+      onSelect={setSelectedSkip}
+      onCancel={() => setSelectedSkip(null)}
+      onBack={() => setCurrentStep((prev) => Math.max(prev - 1, 0))}
+      onContinue={() => setCurrentStep((prev) => Math.min(prev + 1, 5))}
+      currentStep={currentStep}
+      goToStep={setCurrentStep}
+    />
   );
 }
-
-export default App;

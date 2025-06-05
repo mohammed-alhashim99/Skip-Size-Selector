@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+# Skip Size Selector Redesign – WeWantWaste
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a redesigned version of the "Skip Size Selector" page for WeWantWaste. It fulfills the challenge requirements by improving the UI/UX while maintaining the original functionality and using real-time data from the API.
 
-## Available Scripts
+## 🚀 Live Demo
 
-In the project directory, you can run:
+[Live site hosted on Vercel / Netlify – Replace with your link]
 
-### `npm start`
+## 📁 GitHub Repository
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[Link to your public GitHub repo – Replace with your link]
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## ✅ Challenge Requirements & How I Met Them
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Requirement | Status | Notes |
+|------------|--------|-------|
+| Redesign the skip selector page | ✅ | Created a modern, responsive design using cards |
+| Maintain functionality | ✅ | Selecting/deselecting skips works as expected |
+| Use actual skip data from API | ✅ | Data fetched from `https://app.wewantwaste.co.uk/api/skips/by-location?postcode=NR32&area=Lowestoft` |
+| Submit public GitHub + Live link | ✅ | (Include both above) |
+| Submit within 72 hours | ✅ | Delivered on time |
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🧩 Components
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1. `SkipSelector.jsx`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Fetches skip data from the API
+- Displays skips as interactive, animated cards
+- Supports:
+  - Conditional styles for selected/unavailable skips
+  - Price calculation (with VAT)
+  - Dynamic icons for warnings
 
-### `npm run eject`
+### 2. `SkipReceipt.jsx`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Shows a printable-style summary receipt of the selected skip
+- Auto-calculates VAT and total price
+- Includes actions: back, cancel, continue
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 3. `StepProgressBar.jsx`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Vertical step progress bar with hover interactivity
+- Indicates current step
+- Disables future steps
+- Integrates `SkipSelector` and `SkipReceipt`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🎨 Design Goals
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Clean and modern card-based layout
+- Strong color contrast for accessibility
+- Fully responsive (mobile-first layout)
+- Clear visual hierarchy and user flow
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🔧 Tech Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- React (functional components + hooks)
+- Plain CSS (modular per component)
+- Icons from `lucide-react`
+- Hosted with Vercel / Netlify
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📝 How It Works
 
-### Making a Progressive Web App
+1. The page loads and fetches available skip sizes from the live API.
+2. Skips are displayed as cards. Clicking a card selects/deselects it.
+3. A step bar shows progress, and a receipt displays skip summary.
+4. User can go back, cancel selection, or continue.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 🧪 Local Setup Instructions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+git clone https://github.com/your-username/skip-selector-redesign.git
+cd skip-selector-redesign
+npm install
+npm install lucide-react
+npm start
