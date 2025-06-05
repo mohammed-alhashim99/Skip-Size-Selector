@@ -51,7 +51,7 @@ export default function SkipSelector({ selectedSkip, onSelect }) {
 
             </figure>
             <div className="card-header">
-              <a href="#">{skip.hire_period_days || 14} day hire</a>
+              <div>{skip.hire_period_days || 14} day hire</div>
               <button className={`icon-button ${isSelected ? 'selected-color' : 'default-color'}`}>
   £{calculateTotalPrice(skip)}
 </button>
