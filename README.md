@@ -4,11 +4,11 @@ This project is a redesigned version of the "Skip Size Selector" page for WeWant
 
 ## 🚀 Live Demo
 
-[Live site hosted on Vercel / Netlify – Replace with your link]
+https://glittery-tarsier-55574e.netlify.app/
 
 ## 📁 GitHub Repository
 
-[Link to your public GitHub repo – Replace with your link]
+https://github.com/mohammed-alhashim99/Skip-Size-Selector
 
 ---
 
