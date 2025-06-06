@@ -13,7 +13,7 @@ export default function SkipSelector({ selectedSkip, onSelect }) {
 
   const calculateTotalPrice = (skip) => {
     const base = skip.price_before_vat || 0;
-    const vat = skip.vat || 0;
+    // const vat = skip.vat || 0;
     // return (base * (1 + vat / 100)).toFixed(2);
     return base
   };
