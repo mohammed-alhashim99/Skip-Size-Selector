@@ -1,4 +1,4 @@
-/* Layout Container */
+
 .page-layout {
   display: flex;
   align-items: flex-start;
@@ -8,12 +8,13 @@
 
 .left-column {
   display: flex;
+  position: fixed;
   flex-direction: column;
   width: 300px;
   background-color: #33363c;
 }
 
-/* Left Vertical Step Bar */
+
 .vertical-step-bar {
   padding: 2rem 1rem 1rem;
   width: 100%;
@@ -23,9 +24,30 @@
 
 .receipt-wrapper {
   position: sticky;
-  top: 400px; /* adjust as needed */
+  left: 20px;
+  bottom: 5px;
+  width: 300px;
+  
 }
-/* Steps List */
+
+@media (max-width: 768px) {
+  .receipt-wrapper {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    width: auto;
+    max-height: 50vh;
+    padding: 1rem;
+    z-index: 1000;
+  }
+
+  .receipt-paper {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+}
+
 .vertical-step-list {
   position: relative;
   padding-left: 2.5rem;
@@ -34,7 +56,7 @@
   padding: 0;
 }
 
-/* Each Step */
+
 .step-item {
   position: relative;
   display: flex;
@@ -47,7 +69,7 @@
 
 
 
-/* Step Circle + Icon + Number */
+
 .step-circle {
   position: relative;
   width: 32px;
